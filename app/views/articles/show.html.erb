@@ -1,11 +1,17 @@
 <p id="notice"><%= notice %></p>
+<div class="actions">
+  <%= link_to 'Edit', edit_article_path(@article), class: 'button' %>
+  <%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button' %>
+</div>
 <div id="post-show-content" class="skinny-wrapper wrapper-padding">
   <header>
     <p class="date">
-      <%= @article.created_at.strftime("%m/%d/%Y") %>
+      <%= @article.created_at.strftime("%A, %B, %d") %>
     </p>
     <h1><%= @article.title %></h1>
+
     <hr>
+
   </header>
   <div id="content">
     <p><%= @article.content %></p>
