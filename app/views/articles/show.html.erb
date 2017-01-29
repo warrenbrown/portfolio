@@ -13,12 +13,12 @@
 
   </header>
   <div id="content">
-    <p><%= @article.content %></p>
+    <%= markdown @article.content %>
   </div>
   <hr>
   <div id="share-box">
     <p>Share <%= @article.title %></p>
-    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a onclick="javascript:window.open('http://twitter.com/intent/tweet?text=<%= @article.title %> by @shaolincoder - <%= url_for([@article, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-twitter"></i></a>
     <a href="#"><i class="fa fa-facebook"></i></a>
     <a href="#"><i class="fa fa-google-plus"></i></a>
   </div>
