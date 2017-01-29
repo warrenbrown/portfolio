@@ -19,6 +19,11 @@
   </div>
 
   <body>
+    <% flash.each do |key, message| %>
+    <div class="alert alert-<%= key %>">
+      <%= message %>
+    </div>
+    <% end %>
     <%= yield %>
     <footer id="main-footer">
       <p class="copy-right">&copy; 2017 Warren Brown</p>
