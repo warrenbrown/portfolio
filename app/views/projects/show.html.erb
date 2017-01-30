@@ -15,7 +15,7 @@
 
   </header>
   <div id="content">
-    <%=  @project.description %>  <br>
+    <p><%=  markdown @project.description %></p>  <br>
     <div class="button-wrapper">
       <%= link_to "Visit #{@project.title}", "https://#{@project.link}", class: 'project_button', target:'_blank' %>
     </div>
