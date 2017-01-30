@@ -1,0 +1,17 @@
+<div class="actions">
+  <% if user_signed_in? && current_user.email == 'warren@katapultmedia.com' %>
+    <%= link_to 'New Project', new_project_path, class: 'button'%>
+  <% end %>
+</div>
+<h1 id="page-title">Stuff I Built</h1>
+<% @projects.each do |project| %>
+  <div id="post-wrapper" class="skinny-wrapper">
+    <div class="post">
+      <p class="date">
+        <%= project.created_at.strftime("%m/%d/%Y") %>
+      </p>
+      <h2 class="title"><%= link_to project.title, project_path(project) %></h2>
+
+      <hr>
+    </div>
+<% end %>

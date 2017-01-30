@@ -1,0 +1,32 @@
+<div class="actions">
+<% if user_signed_in? && current_user.email == 'warren@katapultmedia.com' %>
+    <%= link_to 'Edit', edit_project_path(@project), class: 'button' %>
+    <%= link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button' %>
+<% end %>
+</div>
+<div id="post-show-content" class="skinny-wrapper wrapper-padding">
+  <header>
+    <p class="date">
+      <%= @project.created_at.strftime("%A, %B, %d") %>
+    </p>
+    <h1><%= @project.title %></h1>
+
+    <hr>
+
+  </header>
+  <div id="content">
+    <%=  @project.description %>  <br>
+    <div class="button-wrapper">
+      <%= link_to "Visit #{@project.title}", "https://#{@project.link}", class: 'project_button', target:'_blank' %>
+    </div>
+  </div>
+  <hr>
+  <div id="share-box">
+    <p>Share <%= @project.title %></p>
+    <a onclick="javascript:window.open('http://twitter.com/intent/tweet?text=<%= @project.title %> by @shaolincoder - <%= url_for([@project, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-google-plus"></i></a>
+  </div>
+  <hr>
+
+</div>

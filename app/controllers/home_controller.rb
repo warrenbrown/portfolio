@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   def index
     @articles = Article.limit(3).order("created_at").all
+    @projects = Project.limit(3).order("created_at").all
   end
 
   def about

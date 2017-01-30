@@ -15,7 +15,10 @@
   <div class="col-3 homepage-content">
     <h2>Stuff I have Built</h2>
     <hr>
-
+    <% @projects.each do |project| %>
+      <h3><%= link_to project.title, project_path(project) %></h3>
+      <p class="date"><%= project.created_at.strftime("%A, %B, %d") %></p>
+    <% end %>
   </div>
 
 </div>
