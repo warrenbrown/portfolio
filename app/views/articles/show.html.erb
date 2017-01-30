@@ -1,6 +1,8 @@
 <div class="actions">
-  <%= link_to 'Edit', edit_article_path(@article), class: 'button' %>
-  <%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button' %>
+<% if user_signed_in? && current_user.email == 'warren@katapultmedia.com' %>
+    <%= link_to 'Edit', edit_article_path(@article), class: 'button' %>
+    <%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button' %>
+<% end %>
 </div>
 <div id="post-show-content" class="skinny-wrapper wrapper-padding">
   <header>

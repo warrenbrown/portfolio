@@ -1,5 +1,7 @@
 <div class="actions">
-  <%= link_to 'New Article', new_article_path, class: 'button'%>
+  <% if user_signed_in? && current_user.email == 'warren@katapultmedia.com' %>
+    <%= link_to 'New Article', new_article_path, class: 'button'%>
+  <% end %>
 </div>
 <h1 id="page-title">Stuff Written</h1>
 <% @articles.each do |article| %>
@@ -11,7 +13,6 @@
       <h2 class="title"><%= link_to article.title, article_path(article) %></h2>
 
       <hr>
-      <p><%= article.content %></p>
     </div>
 <% end %>
 
