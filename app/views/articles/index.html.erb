@@ -4,8 +4,9 @@
   <% end %>
 </div>
 <h1 id="page-title">Stuff Written</h1>
+<div id="post-wrapper" class="skinny-wrapper">
+
 <% @articles.each do |article| %>
-  <div id="post-wrapper" class="skinny-wrapper">
     <div class="post">
       <p class="date">
         <%= article.created_at.strftime("%m/%d/%Y") %>
@@ -16,6 +17,5 @@
     </div>
 <% end %>
 
-  <br>
 
 </div>
