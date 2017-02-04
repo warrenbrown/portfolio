@@ -4,6 +4,4 @@ Rails.application.routes.draw do
   resources :projects
   resources :contacts , only: [ :new, :create ]
   root 'home#index'
-
-  get 'contact' => 'home#contact'
 end

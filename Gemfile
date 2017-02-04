@@ -31,7 +31,9 @@ gem 'redcarpet', '~> 3.3', '>= 3.3.4'
 gem 'pygments.rb', '~> 1.1', '>= 1.1.1'
 gem 'friendly_id', '~> 5.1'
 gem 'devise', '~> 4.2'
-gem 'mail_form', '~> 1.6'
+gem 'figaro', '~> 1.1', '>= 1.1.1'
+gem 'simple_form', '~> 3.2', '>= 3.2.1'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -45,6 +47,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'letter_opener', '~> 1.4', '>= 1.4.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
