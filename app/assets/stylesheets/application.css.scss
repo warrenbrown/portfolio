@@ -32,6 +32,27 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
+.alert-notice {
+  background-color: #dff0d8;
+  border-color: #d0e9c6;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+}
+
+.alert {
+  border-radius: .25rem;
+  padding: 1.2rem;
+  margin: 30px 10px;
+
+}
+
+.alert-alert {
+ background-color: #f2dede;
+ color: #a94442;
+ border-color: #ebcccc;
+ border: 1px solid transparent;
+}
+
 .wrapper {
   width: 90%;
   margin: 0 auto;
